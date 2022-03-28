@@ -13,16 +13,16 @@ public class MyAToI {
     }
     public static void main(String[] args) {
 
-        String s = "-18446744+073709551617";
+        long temp = Long.MAX_VALUE;
+        String s = "-"+(temp);
         s = s.trim();
-        System.out.println(Long.MAX_VALUE);
 
 
         boolean numberStarted = false;
         boolean negative = false;
         boolean positive = false;
 
-        long number = 0;
+        int number = 0;
         int length = s.length();
 
         for(int i = 0; i < length; i ++){
@@ -38,7 +38,7 @@ public class MyAToI {
                 }else if(isSpecial(c)) break;
                 else if(digit>-1){
                     numberStarted = true;
-                    long tens = number*10;
+                    int tens = number*10;
                     number = tens+ digit;
                     if(tens < 0 || number<0){
                         System.out.println("Sudden flip!");
