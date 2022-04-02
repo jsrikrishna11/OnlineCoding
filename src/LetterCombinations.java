@@ -81,11 +81,11 @@ public class LetterCombinations {
                 })
     );
 
-    private static String recurCombinations(String s, String concat, int index){
+    private static void recurCombinations(String s, String concat, int index){
 
         if(index>= s.length()){
             System.out.println(concat);
-            return concat;
+            return;
         }
 
         char number = s.charAt(index);
@@ -98,11 +98,10 @@ public class LetterCombinations {
                 recurCombinations(s, add,index);
             }
         }
-        return concat;
-
     }
 
     public static void main(String[] args) {
-        recurCombinations("23","",0);
+        recurCombinations("2342348497384726849393839579","",0);
+        System.out.println("---------------------------");
     }
 }
