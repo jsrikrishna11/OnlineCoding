@@ -16,7 +16,7 @@ public class LongestPalindrome {
 
         for(int i = 0 ; i < n ; i++) {
             map[i][i] = true;
-            if(result==""){
+            if(result.equals("")){
                 result = input.substring(i,i+1);
             }
             if(i+1 < n)
