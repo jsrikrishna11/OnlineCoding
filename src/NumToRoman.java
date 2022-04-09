@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
 
 //https://leetcode.com/problems/integer-to-roman/
@@ -61,10 +59,7 @@ public class NumToRoman {
 );
 
     private static String concatTimes(String s, int times){
-        StringBuilder concat = new StringBuilder();
-        for(int i = 0; i < times; i++) concat.append(s);
-
-        return concat.toString();
+        return String.valueOf(s).repeat(Math.max(0, times));
     }
 
     private static int properConcat(int num, StringBuilder string, int div){
